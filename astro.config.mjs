@@ -11,22 +11,22 @@ export default defineConfig({
     starlight({
       title: "WesterosCraft Wiki",
       logo: {
-        light: './src/assets/dark-logo.svg',
-        dark: './src/assets/light-logo.svg',
+        light: "./src/assets/dark-logo.svg",
+        dark: "./src/assets/light-logo.svg",
         replacesTitle: true,
       },
       social: {
         github: "https://github.com/WesterosCraft/website",
       },
       sidebar: [
-        { label: "Home", link: "/docs" },
+        { label: "Home", link: "/wiki" },
         {
           label: "Getting Started",
-          autogenerate: { directory: "docs/getting-started" },
+          autogenerate: { directory: "wiki/getting-started" },
         },
         {
           label: "Building",
-          autogenerate: { directory: "docs/building" },
+          autogenerate: { directory: "wiki/building" },
         },
       ],
     }),

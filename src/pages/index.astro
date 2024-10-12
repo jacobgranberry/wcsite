@@ -1,10 +1,11 @@
 ---
-import '@/styles/globals.css'
+import "@/styles/globals.css";
 import RootLayout from "@/layouts/root.astro";
-
+import { Button } from "@/components/ui/button";
 ---
+
 <RootLayout>
-    <main class='flex min-h-screen flex-col items-center'>
-    test
-    </main>
+  <main class='flex min-h-screen flex-col items-center'>
+    <Button asChild><a class='color-red' href='/wiki'>Docs</a></Button>
+  </main>
 </RootLayout>
