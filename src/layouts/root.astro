@@ -1,0 +1,52 @@
+---
+// import SiteHeader from "@components/site-header.astro";
+// import Footer from "@components/footer.astro";
+import { getEntry } from "astro:content";
+import PageSeo from "@/components/page-seo.astro";
+import { ViewTransitions } from "astro:transitions";
+
+// import "@fontsource/inter";
+
+import "../styles/globals.css";
+import Footer from "@/components/footer.astro";
+
+// const navigation = await getEntry("pages", "mainNav");
+
+const {
+  title,
+  description,
+  ogTitle,
+  ogType,
+  ogImage,
+  ogUrl,
+  includeTransitions,
+  ogImageAlt,
+  twitterDescription,
+} = Astro.props.frontmatter || Astro.props;
+---
+
+<html lang='en'>
+  <head>
+    <PageSeo
+      title={title}
+      description={description}
+      ogTitle={ogTitle}
+      ogType={ogType}
+      ogImage={ogImage}
+      ogUrl={ogUrl}
+      ogImageAlt={ogImageAlt}
+      twitterDescription={twitterDescription}
+    />
+    {includeTransitions && <ViewTransitions />}
+    <meta charset='UTF-8' />
+    <meta name='viewport' content='width=device-width' />
+    <link rel='icon' href='/favicon.ico' />
+    <meta name='generator' content={Astro.generator} />
+    </script>
+  </head>
+  <body class='relative flex min-h-screen flex-col antialiased bg-primaryLight'>
+    <!-- <SiteHeader navigation={navigation} /> -->
+    <slot />
+    <Footer />
+  </body>
+</html>
