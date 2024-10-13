@@ -4,11 +4,13 @@ import starlight from "@astrojs/starlight";
 import markdoc from "@astrojs/markdoc";
 import react from "@astrojs/react";
 import tailwind from "@astrojs/tailwind";
+import starlightImageZoom from "starlight-image-zoom";
 
 // https://astro.build/config
 export default defineConfig({
   integrations: [
     starlight({
+      plugins: [starlightImageZoom()],
       title: "WesterosCraft Wiki",
       logo: {
         light: "./src/assets/dark-logo.svg",
@@ -17,6 +19,9 @@ export default defineConfig({
       },
       social: {
         github: "https://github.com/WesterosCraft/website",
+        discord: "https://discord.com/invite/pBS5TH4",
+        twitter: "https://twitter.com/westeroscraft",
+        youtube: "https://youtube.com/@WesterosCraft",
       },
       sidebar: [
         { label: "Home", link: "/wiki" },
@@ -31,6 +36,16 @@ export default defineConfig({
         {
           label: "Guides",
           autogenerate: { directory: "wiki/guides" },
+        },
+        {
+          label: "Builds by Region",
+          items: [
+            {
+              label: "Beyond the Wall",
+              autogenerate: { directory: "wiki/builds/beyond-the-wall" },
+              collapsed: true,
+            },
+          ],
         },
       ],
     }),
