@@ -28,6 +28,10 @@ export default defineConfig({
           label: "Building",
           autogenerate: { directory: "wiki/building" },
         },
+        {
+          label: "Guides",
+          autogenerate: { directory: "wiki/guides" },
+        },
       ],
     }),
     markdoc(),
