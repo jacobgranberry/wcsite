@@ -1,0 +1,40 @@
+
+:root {
+    --purple-hsl: 205, 60%, 60%;
+    --overlay-blurple: hsla(var(--purple-hsl), 0.4);
+
+    --red-hsl: 0, 56%, 39%;
+    --overlay-crimson: hsla(var(--red-hsl), 0.4);
+
+    --blue-hsl: 210, 80%, 56%;
+    --overlay-azure: hsla(var(--blue-hsl), 0.4);
+  }
+
+[data-has-hero] .page {
+    background: linear-gradient(215deg, var(--overlay-blurple), transparent 40%),
+      radial-gradient(var(--overlay-blurple), transparent 40%) no-repeat -60vw -40vh /
+        105vw 200vh,
+      radial-gradient(var(--overlay-blurple), transparent 65%) no-repeat 50%
+        calc(100% + 20rem) / 60rem 30rem;
+  }
+
+  /* [data-has-hero] .page {
+    background: linear-gradient(215deg, var(--overlay-crimson), transparent 40%),
+      radial-gradient(var(--overlay-crimson), transparent 40%) no-repeat -60vw -40vh /
+        105vw 200vh,
+      radial-gradient(var(--overlay-crimson), transparent 65%) no-repeat 50%
+        calc(100% + 20rem) / 60rem 30rem;
+  } */
+
+
+/* [data-has-hero] .page {
+    background: linear-gradient(215deg, var(--overlay-azure), transparent 40%),
+      radial-gradient(var(--overlay-azure), transparent 40%) no-repeat -60vw -40vh /
+        105vw 200vh,
+      radial-gradient(var(--overlay-azure), transparent 65%) no-repeat 50%
+        calc(100% + 20rem) / 60rem 30rem;
+  } */
+
+  [data-has-hero] .hero > img {
+    filter: drop-shadow(0 0 3rem var(--overlay-blurple));
+  }

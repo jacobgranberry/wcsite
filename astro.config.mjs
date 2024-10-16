@@ -4,13 +4,11 @@ import starlight from "@astrojs/starlight";
 import markdoc from "@astrojs/markdoc";
 import react from "@astrojs/react";
 import tailwind from "@astrojs/tailwind";
-import starlightImageZoom from "starlight-image-zoom";
 
 // https://astro.build/config
 export default defineConfig({
   integrations: [
     starlight({
-      plugins: [starlightImageZoom()],
       title: "WesterosCraft Wiki",
       logo: {
         light: "./src/assets/dark-logo.svg",
@@ -24,7 +22,7 @@ export default defineConfig({
         youtube: "https://youtube.com/@WesterosCraft",
       },
       sidebar: [
-        { label: "Home", link: "/wiki" },
+        { label: "Wiki Home", link: "/wiki" },
         {
           label: "Getting Started",
           autogenerate: { directory: "wiki/getting-started" },
@@ -45,9 +43,60 @@ export default defineConfig({
               autogenerate: { directory: "wiki/builds/beyond-the-wall" },
               collapsed: true,
             },
+            {
+              label: "Crownlands",
+              autogenerate: { directory: "wiki/builds/crownlands" },
+              collapsed: true,
+            },
+            {
+              label: "Dorne",
+              autogenerate: { directory: "wiki/builds/dorne" },
+              collapsed: true,
+            },
+            {
+              label: "Iron Islands",
+              autogenerate: { directory: "wiki/builds/iron-islands" },
+              collapsed: true,
+            },
+            {
+              label: "North",
+              autogenerate: { directory: "wiki/builds/north" },
+              collapsed: true,
+            },
+            {
+              label: "Reach",
+              autogenerate: { directory: "wiki/builds/reach" },
+              collapsed: true,
+            },
+            {
+              label: "Riverlands",
+              autogenerate: { directory: "wiki/builds/riverlands" },
+              collapsed: true,
+            },
+            {
+              label: "Stormlands",
+              autogenerate: { directory: "wiki/builds/stormlands" },
+              collapsed: true,
+            },
+            {
+              label: "The Wall",
+              autogenerate: { directory: "wiki/builds/the-wall" },
+              collapsed: true,
+            },
+            {
+              label: "Vale",
+              autogenerate: { directory: "wiki/builds/vale" },
+              collapsed: true,
+            },
+            {
+              label: "Westerlands",
+              autogenerate: { directory: "wiki/builds/westerlands" },
+              collapsed: true,
+            },
           ],
         },
       ],
+      customCss: ['./src/styles/custom.css'],
     }),
     markdoc(),
     react(),

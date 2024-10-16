@@ -1,19 +1,23 @@
 ---
-title: Welcome to Starlight
-description: Get started building your docs site with Starlight.
+title: WesterosCraft Wiki
+description: Get started exploring Westeros from by exploring our compiled wiki of things from application guidelines, project details and histories and more.
 template: splash
 hero:
-  tagline: Congrats on setting up a new Starlight project!
-  #   image:
-  #     file: ../../../assets/houston.webp
+  title: WesterosCraft Wiki
+  tagline: Get started exploring Westeros from by exploring our compiled wiki of things from application guidelines, project details and histories and more.
+  image:
+    alt: Kings Landing Streets
+    file: ../../../assets/kl2.png
   actions:
-    - text: Example Guide
-      link: /wiki/getting-started/apply-to-build/
+    - text: Explore the wiki
+      link: /getting-started/
       icon: right-arrow
-    - text: Read the Starlight docs
-      link: https://starlight.astro.build
+    - text: Learn to join the server
+      link: /getting-started/new-visitors-guide
       icon: external
       variant: minimal
+      attrs:
+        rel: me
 ---
 
 import { Card, CardGrid } from '@astrojs/starlight/components';
