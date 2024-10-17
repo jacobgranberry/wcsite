@@ -11,18 +11,34 @@ import {
 import { cn } from "@/lib/utils";
 import { Button } from "./ui/button";
 
-const data= {items: [{
-    isDropdown: false,
-    text: "l text",
-    description: "descripty"
-}]}
+const data = {
+  items: [
+    {
+      isDropdown: true,
+      text: "Community",
+    },
+    {
+      isDropdown: false,
+      text: "Wiki",
+      link: "/wiki",
+    },
+    {
+      isDropdown: false,
+      text: "Discord",
+    },
+    {
+      isDropdown: false,
+      text: "Map",
+    },
+  ],
+};
 
 export const MainNav = () => {
   return (
     <div className='hidden lg:grid gap-4 h-16 items-center justify-between md:grid-cols-[176px_auto_auto]'>
       <a className='inline-block' href='/'>
         <img
-          src='/src/assets/dark-logo.svg'
+          src='/src/assets/light-logo.svg'
           alt='WesterosCraft Logo'
           width={176}
           height={24}
@@ -63,7 +79,7 @@ export const MainNav = () => {
       <div className='ml-auto'>
         <a href='/join'>
           <Button
-            variant='destructive'
+            // variant='destructive'
             className='font-semibold text-md text-white'
           >
             Join Server
