@@ -8,6 +8,12 @@
 
     --blue-hsl: 210, 80%, 56%;
     --overlay-azure: hsla(var(--blue-hsl), 0.4);
+
+    --sl-font: 'Gothic A1', serif;
+  }
+
+  .judson {
+    font-family: 'Judson', serif;
   }
 
 [data-has-hero] .page {

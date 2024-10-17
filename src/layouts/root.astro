@@ -9,6 +9,7 @@ import { ViewTransitions } from "astro:transitions";
 
 import "../styles/globals.css";
 import Footer from "@/components/footer.astro";
+import Nav from "@/components/nav.astro";
 
 // const navigation = await getEntry("pages", "mainNav");
 
@@ -45,7 +46,7 @@ const {
     </script>
   </head>
   <body class='relative flex min-h-screen flex-col antialiased bg-primaryLight'>
-    <!-- <SiteHeader navigation={navigation} /> -->
+    <Nav />
     <slot />
     <Footer />
   </body>

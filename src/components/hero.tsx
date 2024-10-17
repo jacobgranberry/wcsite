@@ -11,16 +11,16 @@ import {
 
 const images = [
   {
-    src: "/placeholder.svg?height=1080&width=1920",
-    alt: "Stunning landscape with green cliffs and water"
+    src: "/src/assets/kings-landing.jpeg?height=1080&width=1920",
+    alt: "Kings Landing"
   },
   {
-    src: "/placeholder.svg?height=1080&width=1920",
-    alt: "Beautiful mountain range"
+    src: "/src/assets/pyke.jpeg?height=1080&width=1920",
+    alt: "Pyke"
   },
   {
-    src: "/placeholder.svg?height=1080&width=1920",
-    alt: "Serene beach at sunset"
+    src: "/src/assets/winterfell.jpeg?height=1080&width=1920",
+    alt: "Winterfell"
   },
 ]
 
@@ -39,18 +39,19 @@ export default function Hero() {
             </CarouselItem>
           ))}
         </CarouselContent>
-        <div className="absolute inset-0 bg-black/30" /> {/* Overlay for better text visibility */}
+        <CarouselPrevious className="absolute left-4 top-1/2 z-20" />
+        <CarouselNext className="absolute right-4 top-1/2 z-20" />
+        {/* <div className="absolute inset-0 bg-black/30" /> Overlay for better text visibility */}
         <div className="absolute inset-0 z-10 flex flex-col justify-between p-6 sm:p-12">
           <div className="max-w-3xl space-y-4">
-            <h1 className="text-4xl font-bold tracking-tighter text-white sm:text-6xl md:text-7xl">
-              Discover an Amazing Nature Adventure
+            <h1 className="text-4xl font-bold tracking-tighter text-white sm:text-6xl md:text-7xl judson">
+              Explore the world of Westeros inside Minecraft
             </h1>
-            <Button className="bg-white text-black hover:bg-white/90">Get In Touch</Button>
+            <Button className="bg-white text-black hover:bg-white/90">Learn How To Join</Button>
           </div>
           <div className="space-y-4">
             <p className="max-w-2xl text-sm text-white/90 sm:text-base">
-              Explore Stunning Landscapes And Connect With Nature On Our Guided Adventures. Experience Breathtaking Vistas And
-              Immerse Yourself In The Wild, Embracing The Thrill Of Discovery And Natural Beauty.
+            Explore a meticulously crafted virtual realm inspired by George R.R. Martin's epic fantasy world. From King's Landing to Winterfell, our immersive Minecraft server offers a stunning, player-driven recreation of the Seven Kingdoms.
             </p>
             <div className="flex space-x-2">
               <Button variant="secondary" className="bg-white/10 text-white hover:bg-white/20">
@@ -68,8 +69,6 @@ export default function Hero() {
             </div>
           </div>
         </div>
-        <CarouselPrevious className="absolute left-4 top-1/2 z-20" />
-        <CarouselNext className="absolute right-4 top-1/2 z-20" />
       </Carousel>
     </div>
   )

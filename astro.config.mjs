@@ -15,6 +15,13 @@ export default defineConfig({
         dark: "./src/assets/light-logo.svg",
         replacesTitle: true,
       },
+      customCss: [
+        '@fontsource/judson/400.css',
+        '@fontsource/judson/700.css',
+        '@fontsource/gothic-a1/400.css',
+        // '@fontsource/gothic-a1/400-italic.css',
+        './src/styles/custom.css'
+      ],
       social: {
         github: "https://github.com/WesterosCraft/website",
         discord: "https://discord.com/invite/pBS5TH4",
@@ -96,7 +103,6 @@ export default defineConfig({
           ],
         },
       ],
-      customCss: ['./src/styles/custom.css'],
     }),
     markdoc(),
     react(),
