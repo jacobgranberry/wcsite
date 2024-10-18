@@ -12,8 +12,12 @@
     --sl-font: 'Gothic A1', serif;
   }
 
-  .judson {
+.judson {
     font-family: 'Judson', serif;
+  }
+
+  body {
+    font-family: var(--sl-font);
   }
 
 [data-has-hero] .page {
