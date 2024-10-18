@@ -9,7 +9,7 @@ import {
   CarouselPrevious,
 } from "@/components/ui/carousel";
 import ghosthill from "@/assets/ghost_hill4.jpg";
-import kl from "@/assets/kl_render2.png";
+import kl from "@/assets/kl_render2.webp";
 import hg from "@/assets/highgarden2.png";
 
 const images = [
@@ -66,25 +66,25 @@ export default function Hero() {
                 variant='secondary'
                 className='bg-white/10 text-white hover:bg-white/20'
               >
-                Mountain
+                King's Landing
               </Button>
               <Button
                 variant='secondary'
                 className='bg-white/10 text-white hover:bg-white/20'
               >
-                Outdoor
+                Winterfell
               </Button>
               <Button
                 variant='secondary'
                 className='bg-white/10 text-white hover:bg-white/20'
               >
-                Beach
+                Castle Black
               </Button>
               <Button
                 variant='secondary'
                 className='bg-white/10 text-white hover:bg-white/20'
               >
-                Open Sea
+                Highgarden
               </Button>
             </div>
           </div>
