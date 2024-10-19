@@ -3,12 +3,14 @@ import "@/styles/globals.css";
 import RootLayout from "@/layouts/root.astro";
 import { Button } from "@/components/ui/button";
 import Hero from "@/components/hero";
+import LocationShowcase from "@/components/location-showcase.astro";
 ---
 
 <!-- https://dribbble.com/shots/24805738-NATURELY-Travel-Landing-Page -->
 <RootLayout>
   <main class='flex min-h-screen flex-col items-center px-10'>
     <Hero client:load />
+    <LocationShowcase />
     <Button asChild>
       <a class='color-red' href='/wiki'>Docs</a>
     </Button>

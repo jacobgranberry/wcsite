@@ -3,6 +3,8 @@ import PageSeo from "@/components/page-seo.astro";
 import { ViewTransitions } from "astro:transitions";
 import Footer from "@/components/footer.astro";
 import Nav from "@/components/nav.astro";
+import "@fontsource/judson";
+import "@fontsource/gothic-a1";
 import "../styles/globals.css";
 
 const {
@@ -35,8 +37,8 @@ const {
     <meta name='viewport' content='width=device-width' />
     <link rel='icon' href='/favicon.ico' />
     <meta name='generator' content={Astro.generator} />
-    </script>
   </head>
+
   <body class='relative flex min-h-screen flex-col antialiased bg-zinc-900'>
     <Nav />
     <slot />

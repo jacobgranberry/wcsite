@@ -18,11 +18,10 @@ export default defineConfig({
         replacesTitle: true,
       },
       customCss: [
-        '@fontsource/judson/400.css',
-        '@fontsource/judson/700.css',
-        '@fontsource/gothic-a1/400.css',
-        // '@fontsource/gothic-a1/400-italic.css',
-        './src/styles/custom.css'
+        "@fontsource/judson/400.css",
+        "@fontsource/judson/700.css",
+        "@fontsource/gothic-a1/400.css",
+        "./src/styles/custom.css",
       ],
       social: {
         github: "https://github.com/WesterosCraft/website",
@@ -112,5 +111,5 @@ export default defineConfig({
   ],
 
   output: "server",
-  adapter: cloudflare({imageService: "cloudflare"}),
+  adapter: cloudflare({ imageService: "cloudflare" }),
 });

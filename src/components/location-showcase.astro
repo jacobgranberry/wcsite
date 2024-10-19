@@ -1,0 +1,94 @@
+---
+// LocationShowcase.astro
+import { Image } from "astro:assets";
+
+const locations = [
+  {
+    id: 1,
+    title: "Mystic Forest",
+    image: "/placeholder.svg?height=200&width=300",
+  },
+  {
+    id: 2,
+    title: "Crystal Cave",
+    image: "/placeholder.svg?height=200&width=300",
+  },
+  {
+    id: 3,
+    title: "Sunset Beach",
+    image: "/placeholder.svg?height=200&width=300",
+  },
+  {
+    id: 4,
+    title: "Mountain Peak",
+    image: "/placeholder.svg?height=200&width=300",
+  },
+  {
+    id: 5,
+    title: "Ancient Ruins",
+    image: "/placeholder.svg?height=200&width=300",
+  },
+  {
+    id: 6,
+    title: "Underwater City",
+    image: "/placeholder.svg?height=200&width=300",
+  },
+];
+---
+
+<section class='w-full py-12 space-y-8'>
+  <div class='container px-4 md:px-6 mx-auto'>
+    <h2 class='text-3xl font-bold text-center mb-8'>
+      Explore Our 400+ Unique Locations
+    </h2>
+    <div class='relative overflow-hidden'>
+      <div
+        class='flex space-x-4 overflow-x-scroll scrollbar-hide'
+        id='location-scroll'
+      >
+        {
+          locations.map((location) => (
+            <div class='flex-none w-[300px]'>
+              <div class='relative h-[200px] rounded-lg overflow-hidden'>
+                <Image
+                  src={location.image}
+                  alt={location.title}
+                  width={300}
+                  height={200}
+                  class='object-cover w-full h-full transition-all hover:scale-105'
+                />
+                <div class='absolute bottom-0 left-0 right-0 p-4 bg-gradient-to-t from-black to-transparent'>
+                  <h3 class='text-lg font-semibold text-white'>
+                    {location.title}
+                  </h3>
+                </div>
+              </div>
+            </div>
+          ))
+        }
+      </div>
+    </div>
+    <div class='flex justify-center space-x-4 mt-8'>
+      <button
+        class='px-4 py-2 bg-primary text-white rounded-md hover:bg-primary-dark transition-colors'
+      >
+        See More on Our Wiki
+      </button>
+      <button
+        class='px-4 py-2 border border-primary text-primary rounded-md hover:bg-primary hover:text-white transition-colors'
+      >
+        Check Out Our Project Tracker
+      </button>
+    </div>
+  </div>
+</section>
+
+<style>
+  .scrollbar-hide::-webkit-scrollbar {
+    display: none;
+  }
+  .scrollbar-hide {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+</style>

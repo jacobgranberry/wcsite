@@ -10,7 +10,7 @@ hero:
     file: ../../../assets/kl2.png
   actions:
     - text: Explore the wiki
-      link: /getting-started/
+      link: /wiki/getting-started/apply-to-build
       icon: right-arrow
     - text: Learn to join the server
       link: /getting-started/new-visitors-guide
