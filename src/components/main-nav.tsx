@@ -10,6 +10,7 @@ import {
 } from "@/components/ui/navigation-menu";
 import { cn } from "@/lib/utils";
 import { Button } from "./ui/button";
+import ButtonAnimatedGradient from "./button-animated-gradient";
 
 const data = {
   items: [
@@ -69,7 +70,7 @@ export const MainNav = () => {
                   asChild
                   className={`${navigationMenuTriggerStyle()} rounded-none bg-transparent text-white hover:bg-primaryDark-light hover:text-primaryGold-300 focus:bg-primaryDark-light focus:text-primaryGold-400`}
                 >
-                  <a href={n.isDropdown?.value?.link}>{n?.text}</a>
+                  <a href={n.isDropdown?.value?.link || n?.link}>{n?.text}</a>
                 </NavigationMenuLink>
               </NavigationMenuItem>
             )
@@ -79,11 +80,12 @@ export const MainNav = () => {
       <div className='ml-auto'>
         <a href='/join'>
           <Button
-            // variant='destructive'
-            className='font-semibold text-md text-white'
+            size='lg'
+            className='bg-white text-black hover:bg-white/90 font-semibold'
           >
-            Join Server
+            Join Now
           </Button>
+          {/* <ButtonAnimatedGradient /> */}
         </a>
       </div>
     </div>

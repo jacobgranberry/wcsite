@@ -30,35 +30,34 @@ export default defineConfig({
         youtube: "https://youtube.com/@WesterosCraft",
       },
       sidebar: [
-        { label: "Wiki Home", link: "/wiki" },
         {
           label: "Getting Started",
-          autogenerate: { directory: "wiki/getting-started" },
+          autogenerate: { directory: "/wiki/docs/getting-started" },
         },
         {
           label: "Building",
-          autogenerate: { directory: "wiki/building" },
+          autogenerate: { directory: "/wiki/docs/building" },
         },
         {
           label: "Guides",
-          autogenerate: { directory: "wiki/guides" },
+          autogenerate: { directory: "/wiki/docs/guides" },
         },
         {
           label: "Builds by Region",
           items: [
             {
               label: "Beyond the Wall",
-              autogenerate: { directory: "wiki/builds/beyond-the-wall" },
+              autogenerate: { directory: "builds/beyond-the-wall" },
               collapsed: true,
             },
             {
               label: "Crownlands",
-              autogenerate: { directory: "wiki/builds/crownlands" },
+              autogenerate: { directory: "/builds/crownlands" },
               collapsed: true,
             },
             {
               label: "Dorne",
-              autogenerate: { directory: "wiki/builds/dorne" },
+              autogenerate: { directory: "/builds/dorne" },
               collapsed: true,
             },
             {
@@ -104,6 +103,9 @@ export default defineConfig({
           ],
         },
       ],
+      components: {
+        // Sidebar: "./src/overrides/Sidebar.astro",
+      },
     }),
     markdoc(),
     react(),

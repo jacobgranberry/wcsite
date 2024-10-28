@@ -1,7 +1,6 @@
 ---
 title: WesterosCraft Wiki
 description: Get started exploring Westeros from by exploring our compiled wiki of things from application guidelines, project details and histories and more.
-template: splash
 hero:
   title: WesterosCraft Wiki
   tagline: Get started exploring Westeros from by exploring our compiled wiki of things from application guidelines, project details and histories and more.
