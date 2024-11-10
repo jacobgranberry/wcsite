@@ -69,61 +69,65 @@ export default function Hero() {
   };
 
   return (
-    <div className=' w-full overflow-hidden'>
+    <div className=" w-full overflow-hidden">
       <Carousel
         ref={carouselRef}
-        className='h-full w-full'
+        className="h-full w-full"
         setApi={setCarouselApi}
         opts={{
           align: "start",
         }}
       >
-        <CarouselContent className='relative '>
+        <CarouselContent className="relative ">
           {images.map((image, index) => (
             <CarouselItem key={index}>
               <img
                 src={image.src}
                 alt={image.alt}
-                className='w-full h-4/5 xl:h-[calc(100vh-64px)] object-cover'
+                className="w-full h-4/5 xl:h-[calc(100vh-64px)] object-cover"
               />
             </CarouselItem>
           ))}
         </CarouselContent>
         <div
-          className='absolute inset-y-0 left-0 w-3/5 bg-gradient-to-r from-black via-black/40 to-transparent'
-          aria-hidden='true'
+          className="absolute inset-y-0 left-0 w-3/5 bg-gradient-to-r from-black via-black/40 to-transparent"
+          aria-hidden="true"
         />
-        <div className='absolute inset-0 z-10 flex flex-col justify-between p-6 sm:p-12'>
-          <div className='max-w-3xl space-y-8'>
-            <h1 className='text-4xl font-medium tracking-tight text-white sm:text-6xl md:text-7xl font-serif'>
+        <div className="absolute inset-0 z-10 flex flex-col justify-between p-6 sm:p-12">
+          <div className="max-w-3xl space-y-8">
+            <h1 className="text-4xl font-medium tracking-tight text-white sm:text-6xl md:text-7xl font-serif">
               Explore the world of Westeros inside Minecraft
             </h1>
-            {/* <GradualSpacing
-              className='font-display text-center text-4xl -tracking-widest dark:text-black text-white md:text-7xl md:leading-[5rem] font-serif'
-              text='Westeros inside Minecraft'
-            /> */}
-            {/* <ButtonAnimatedGradient /> */}
-            <div className='flex flex-row gap-4'>
-              <ShimmerButton className='shadow-2xl'>
-                <span className='whitespace-pre-wrap text-center text-sm font-medium leading-none tracking-tight text-white dark:from-white dark:to-slate-900/10 lg:text-lg'>
-                  Learn How To Explore
-                </span>
-              </ShimmerButton>
-              <Button size='lg'>Apply to Build</Button>
-            </div>
-          </div>
-          <div className='space-y-4'>
-            <p className='max-w-2xl text-lg text-white/90 sm:text-base'>
+            <p className="max-w-2xl text-lg text-white/90 sm:text-base">
               Explore a meticulously crafted virtual realm inspired by George
               R.R. Martin's epic fantasy world. From King's Landing to
               Winterfell, our immersive Minecraft server offers a stunning,
               player-driven recreation of the Seven Kingdoms.
             </p>
-            <div className='flex space-x-2'>
+            {/* <GradualSpacing
+              className='font-display text-center text-4xl -tracking-widest dark:text-black text-white md:text-7xl md:leading-[5rem] font-serif'
+              text='Westeros inside Minecraft'
+            /> */}
+            {/* <ButtonAnimatedGradient /> */}
+            <div className="flex flex-row gap-4">
+              <Button size="lg">Learn How To Explore</Button>
+              <Button size="lg" variant="outline">
+                Apply to Build
+              </Button>
+            </div>
+          </div>
+          <div className="space-y-4">
+            {/* <p className="max-w-2xl text-lg text-white/90 sm:text-base">
+              Explore a meticulously crafted virtual realm inspired by George
+              R.R. Martin's epic fantasy world. From King's Landing to
+              Winterfell, our immersive Minecraft server offers a stunning,
+              player-driven recreation of the Seven Kingdoms.
+            </p> */}
+            <div className="flex space-x-2">
               {images.map((image, index) => (
                 <Button
                   key={index}
-                  variant='secondary'
+                  variant="secondary"
                   className={`bg-white/10 text-white hover:bg-white/20 transition-all duration-200 ${
                     currentIndex === index
                       ? "ring-2 ring-white bg-white/30"
